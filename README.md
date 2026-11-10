@@ -1,6 +1,6 @@
 # Canvas Discussion Poster
 
-A simple Python script that posts messages to Canvas LMS discussion boards using the Canvas API.
+Posts a message to a Canvas LMS discussion boards using the Canvas API.
 
 ## What This Does
 
@@ -24,12 +24,13 @@ pip install -r requirements.txt
 ### 2. Get Your Canvas Access Token
 
 1. Log into Canvas
-2. Go to **Account** → **Settings**
+2. Go to **Account** -> **Settings**
 3. Scroll down to **Approved Integrations**
 4. Click **+ New Access Token**
 5. Give it a name (e.g., "API Learning Project")
 6. Click **Generate Token**
-7. **Copy the token immediately** (you won't see it again!)
+7. Set an expiration on this token for tomorrow
+8. **Copy the token immediately** (you won't see it again!)
 
 ### 3. Create Your Token File
 
@@ -68,13 +69,14 @@ Post ID: 987654
 
 ## Security Notes
 
-⚠️ **Important**: Your access token is like a password!
+**Important**: Your access token is like a password!
 
 - **Never commit `canvas_token.txt` to Git**
-- Add it to your `.gitignore`:
+- Add the token file to your `.gitignore`:
 ```
   canvas_token.txt
 ```
+- Set an expiration on the token in Canvas
 - Don't share your token with anyone
 - Delete tokens you're not using from Canvas settings
 
